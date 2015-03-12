@@ -1,0 +1,270 @@
+{
+  "version":"0.4",
+  "pageContent":{
+    "comments":"Must use underscore for en-us.",
+    "navItems":{
+      "_common":{
+        "buttonBackToGallery":{
+          "text":"Back To Gallery"
+        },
+        "buttonStartTutorial":{
+          "text":"Start Tutorial"
+        }
+      }
+    }
+  },
+  "tutorial":{
+    "_common":{
+      "name":"Modeling EDIFACT data",
+      "shortDescription":"Learn how to model EDIFACT data using DFDL by exploring this simple example.",
+      "durationText":"This tutorial takes approximately",
+      "durationTime":"5 minutes",
+      "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
+      "resourceToOpen":"MainSchema"
+    },
+    "pageDetails":{
+      "topicsName":"Tutorial Topics",
+      "_topicListComment":"A short list of product concepts or tasks demonstrated by this tutorial",
+      "topicList":[
+        {
+          "title":"Modeling EDIFACT messages"
+        },
+        {
+          "title":"Editing DFDL schema"
+        },
+        {
+          "title":"Testing DFDL schema"
+        }
+      ],
+      "outcomesName":"Learning outcomes",
+      "_outcomesComment":"A description of what the user will have learned or accomplished by running this tutorial.",
+      "outcomeList":[
+        {
+          "title":"Use the DFDL editor to model and parse EDIFACT data."
+        }
+      ],
+      "summary":{
+        "overviewName":"OVERVIEW",
+        "_overviewComment":"A short description of what happens in this tutorial, and an optional short explanation of the IIB concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+        "sections":[
+          {
+            "section":"This tutorial demonstrates the modeling of UN/EDIFACT data using DFDL schema."
+          }  
+        ]
+      }
+    },
+    "pageSteps":{
+      "concept":{
+        "overview":{
+          "name":"Overview",
+          "heading":"Overview",
+          "_overviewComment":"A short description of what this tutorial does, and what the user will do to run the tutorial.",
+        "sections":[
+          {
+            "section":"This tutorial demonstrates the modeling of UN/EDIFACT data using DFDL schema. The DFDL schema editor is used to view the model and test parse example EDIFACT data files."
+          },
+          {
+            "section":"UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages which consist of segments, which in turn consist of composites and elements. Composites in turn consist of elements. Segments, composites and elements are delimited by separators. Only segments have initiators." 
+          },
+          {
+            "section":"An interchange starts with a UNB segment and ends with a UNZ segment. A message starts with a UNH segment and ends with a UNT segment, an element in the UNH segment identifying the message type. Messages may be grouped into functional groups, which start with a UNG segment and end with a UNE segment. Optionally the interchange can start with a UNA segment which defines the delimiters used by the interchange; defaults are used if there is no UNA." 
+          },
+          {
+            "section":"UN/EDIFACT data streams adopt one of several syntax levels, the most common being version 3 or version 4."
+          }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Message modeling overview",
+              "link":"com.ibm.etools.mft.doc/bd40430_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"How to model data with DFDL",
+              "link":"com.ibm.etools.mft.doc/df20125_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"EDIFACT messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad09560_.htm"
+            },
+            {
+              "title":"GitHub link to ",
+              "description":"DFDLSchemas EDIFACT repository",
+              "link":"http://dfdlschemas.github.io/EDIFACT/",
+              "type":"web"
+            }
+          ]
+        }
+      },
+      "create":{
+        "overview":{
+          "name":"Create",
+          "heading":"Import projects",
+          "_createComment":"A description of what will happen when the user clicks Import.",
+          "sections":[
+            {
+              "section":"Two shared libraries are imported into your workspace."
+            },
+            {
+              "section":"Library EDIFACT-D03B contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library."
+            },
+            {
+              "section":"Library EDIFACT-Common contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4." 
+            }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Working with DFDL schema files",
+              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+            }
+          ]
+        },
+        "actionName":"Import"
+      },
+      "prepare":{
+        "overview":{
+          "name":"Prepare",
+          "heading":"Imported projects",
+          "_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
+          "sections":[
+            {
+              "section":"The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace."
+            }
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Working with DFDL schema files",
+              "link":"com.ibm.etools.mft.doc/df20061_.htm"
+            }
+          ]
+        }
+      },
+      "run":{
+        "cleanupName":"Clean up",
+        "cleanupDescription":"Clean up and remove any changes made by the tutorial.",
+        "overview":{
+          "name":"Run",
+          "heading":"Follow these steps to complete the tutorial",
+          "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
+          "sections":[
+            {
+              "section":"The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace.",
+              "steps":{
+                "type":"ordered",
+                "details":[
+                  {
+                    "details":"In library EDIFACT-D03B, open EDIFACT-SupplyChain-Messages-D.03B.xsd using the DFDL editor. The Interchange message will be highlighted."
+                  },
+                  {
+                    "details":"Test parse an example data file:",
+                    "substeps":{
+                      "type":"unordered",
+                      "details":[
+                        {
+                          "details":"Click the Test Parse Model button. The Test Parse Model dialog opens."
+                        },
+                        {
+                          "details":"In the Parser Input section, select radio button 'Content from a data file' and click Browse."
+                        },
+                        {
+                          "details":"Select file ORDERS_D.03B_Interchange.txt from EDIFACT-D03B and click OK."
+                        },
+                        {
+                          "details":"Set the Encoding to ASCII."
+                        },
+                        {
+                          "details":"Click OK and confirm the switch to the DFDL Test perspective."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "details":"The DFDL Test perspective opens, and the results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed."
+                  },
+                  {
+                    "details":"You can view the parsed data file in the DFDL Test - Parse view. The results of the parse can be viewed in the DFDL Test - Logical Instance view, as a tree or as XML. You can view a log of the parser actions in the DFDL Test - Trace view."
+                  },
+                  {
+                    "details":"Test serialize the logical instance that resulted from the parse:",
+                    "substeps":{
+                      "type":"unordered",
+                      "details":[
+                        {
+                          "details":"Click the Test Serialize Model button. The Test Serialize Model dialog opens."
+                        },
+                        {
+                          "details":"In the Serialzer Input section, select radio button 'Content from a DFDL Test - Logical Instance'."
+                        },
+                        {
+                          "details":"Set the Encoding to ASCII."
+                        },
+                        {
+                          "details":"Click OK."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "details":"The results of the test serialize are displayed. You should see 'Serialization completed successfully' which can be dismissed."
+                  },
+                  {
+                    "details":"You can view the serialized data file in the DFDL Test - Serialize view. You can view a log of the serializer actions in the DFDL Test - Trace view."
+                  },  
+                  {
+                    "details":"Repeat steps 2 through 7 for another example data file, INVOIC_D.03B_Interchange_with_UNA.txt."
+                  }  
+                ]
+              }
+            },  
+            {
+              "section":"The supplied DFDL schemas will parse UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit EDIFACT-Service-Segments-4.1.xsd in the EDIFACT-Common library and change the DFDL expression used to set DFDL variable 'SegmentTerm' to the commented-out value."
+            },
+            {
+              "section":"If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit IBM_EDI_FORMAT.xsd in the EDIFACT-Common library and change DFDL variable 'RepeatSep' to have default value '+' instead of '*'."
+            },
+            {
+              "section":"If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit IBM_EDI_FORMAT.xsd in the EDIFACT-Common library and change DFDL variable 'DecimalSep' to have default value ',' instead of '.'."
+            },
+            {
+              "section":"The two shared libraries can be deployed to an integration node for use by message flows."
+            } 
+          ]
+        },
+        "helpLinks":{
+          "title":"Find out more",
+          "details":[
+            {
+              "title":"Knowledge Center link to ",
+              "description":"Testing a DFDL schema file",
+              "link":"com.ibm.etools.mft.doc/df20065_.htm"
+            },
+            {
+              "title":"Knowledge Center link to ",
+              "description":"EDIFACT messaging standard",
+              "link":"com.ibm.etools.mft.doc/ad09560_.htm"
+            },
+            {
+              "title":"GitHub link to ",
+              "description":"DFDLSchemas EDIFACT repository",
+              "link":"http://dfdlschemas.github.io/EDIFACT/",
+              "type":"web"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
