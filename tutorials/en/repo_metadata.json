@@ -29,7 +29,7 @@
            				{
        		        	        	"id" : "MainSchema",
        				                "editor" : "dfdl",
-    			  	                "wspath" : "<workspace>/EDIFACT-D03B/EDIFACT-SupplyChain-Messages-D03B.xsd"
+    			  	                "wspath" : "<workspace>/EDIFACT-D03B/EDIFACT-SupplyChain-Messages-D.03B.xsd"
        			                }
         		          ],
 		"deployedResources": [
