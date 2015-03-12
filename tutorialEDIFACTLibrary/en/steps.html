@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+
+<html class="no-js" lang="en">
+ 
+	
+<!-- header::Start -->
+	<head>
+		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+		<meta http-equiv="Pragma" content="no-cache">
+  		<meta http-equiv="Expires" content="-1">
+
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
+		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="author" content="IBM">
+		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="keywords" content="keywords" > 
+		<meta name="robots" content="index,follow">
+		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		
+		<title>IBM Integration Bus V10 Tutorial</title>
+
+    	<link rel="stylesheet" href="http://ot4i.github.io/ot4i.tutorials/dist/css/main.css" />
+    	
+    	<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/json2.js"></script>
+    	<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/js2java.js"></script>
+		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/js2java_steps.js"></script>
+  		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/vendor/modernizr.js"></script>
+	</head>
+<!-- header::End -->
+<!-- body::Start -->
+		<body>
+  	<!-- body content here -->
+	<div class="row">
+	  <div class="small-12 medium-12 large-12 columns">
+	    <p> </p>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="small-9 medium-9 large-9 columns">
+	    <h4>Modeling EDIFACT data</h4>
+	  </div>
+	  <div class="small-3 medium-3 large-3 columns">
+	  	<div class="row">
+	    	<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
+		</div>
+	  </div>
+	</div> 
+	<hr>
+	<div class="row">
+	  <div class="small-9 medium-10 large-10 columns">
+	    <h5> Learn how to model EDIFACT data using DFDL by exploring this simple example. </h5>
+	  </div>
+			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</div>
+	</div>
+
+	<div class="row">          
+		  <div class="small-12 medium-12 large-12 columns">
+			<ul class="tabs vertical"> 
+				<li class="tab-title tab-title-small active"> 
+				  <a href="javascript:;" onclick="show('panel11')">Overview</a>
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel21')">Create</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel31')">Prepare</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel41')">Run</a> 
+				</li>
+			</ul>
+			<!-- editing -->
+			<div class="tabs-content panel-thin-blue vertical"> 
+			    <div class="content active" id="panel11">
+			    	<div class="small-12 medium-12 large-12 columns">
+				    	<div class="row content-details">
+					      	<h4>Overview</h4>
+					        
+						    
+								<p> This tutorial demonstrates the modeling of UN/EDIFACT data using DFDL schema. The DFDL schema editor is used to view the model and test parse example EDIFACT data files. </p>
+							
+								<p> UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages which consist of segments, which in turn consist of composites and elements. Composites in turn consist of elements. Segments, composites and elements are delimited by separators. Only segments have initiators. </p>
+							
+								<p> An interchange starts with a UNB segment and ends with a UNZ segment. A message starts with a UNH segment and ends with a UNT segment, an element in the UNH segment identifying the message type. Messages may be grouped into functional groups, which start with a UNG segment and end with a UNE segment. Optionally the interchange can start with a UNA segment which defines the delimiters used by the interchange; defaults are used if there is no UNA. </p>
+							
+								<p> UN/EDIFACT data streams adopt one of several syntax levels, the most common being version 3 or version 4. </p>
+							
+						</div>
+							
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to Message modeling overview">Message modeling overview</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to How to model data with DFDL">How to model data with DFDL</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+							   	
+							
+								
+								
+								<li> <a href="http://dfdlschemas.github.io/EDIFACT/" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
+									
+							
+							</ul>
+						</div>	
+							
+					</div>
+				</div>
+		    	<div class="content" id="panel21">
+		    		<div class="small-10 medium-10 large-10 columns divider">
+				      	<div class="row content-details">
+					      	<h4>Import projects</h4>
+					        
+						    
+								<p> Two shared libraries are imported into your workspace. </p>
+							
+								<p> Library EDIFACT-D03B contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library. </p>
+							
+								<p> Library EDIFACT-Common contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4. </p>
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to Working with DFDL schema files">Working with DFDL schema files</a> </li>
+							   	
+							
+							</ul>
+						</div>
+						
+					</div>
+					<div class="small-2 medium-2 large-2 columns">
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainSchema')"> Import <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>						
+				    </div>
+		    	</div>
+		    	<div class="content" id="panel31">
+		    		<div class="small-10 medium-10 large-10 columns divider">
+						<div class="row content-details">
+						  	<h4>Imported projects</h4>
+						    
+						    
+								<p> The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace. </p>
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to Working with DFDL schema files">Working with DFDL schema files</a> </li>
+							   	
+							
+							</ul>
+						</div>
+							
+					</div>
+					<div class="small-2 medium-2 large-2 columns">
+						<h4 class="tkaction"><a href="javascript:;" onclick="deployArtifacts()"> undefined <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+				    </div>
+		    	</div>
+		    	<div class="content" id="panel41">
+		    		<div class="small-10 medium-10 large-10 columns divider">
+				    	<div class="row content-details">
+					      	<h4>Follow these steps to complete the tutorial</h4>
+					        
+						    
+								<p> The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace. </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> In library EDIFACT-D03B, open EDIFACT-SupplyChain-Messages-D.03B.xsd using the DFDL editor. The Interchange message will be highlighted.
+										
+										</li>
+									
+										<li> Test parse an example data file:
+										
+										
+											
+											<ul>
+											
+												
+													<li> Click the Test Parse Model button. The Test Parse Model dialog opens.</li>
+												
+													<li> In the Parser Input section, select radio button 'Content from a data file' and click Browse.</li>
+												
+													<li> Select file ORDERS_D.03B_Interchange.txt from EDIFACT-D03B and click OK.</li>
+												
+													<li> Set the Encoding to ASCII.</li>
+												
+													<li> Click OK and confirm the switch to the DFDL Test perspective.</li>
+												
+											
+											</ul>
+											
+										
+										</li>
+									
+										<li> The DFDL Test perspective opens, and the results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed.
+										
+										</li>
+									
+										<li> You can view the parsed data file in the DFDL Test - Parse view. The results of the parse can be viewed in the DFDL Test - Logical Instance view, as a tree or as XML. You can view a log of the parser actions in the DFDL Test - Trace view.
+										
+										</li>
+									
+										<li> Test serialize the logical instance that resulted from the parse:
+										
+										
+											
+											<ul>
+											
+												
+													<li> Click the Test Serialize Model button. The Test Serialize Model dialog opens.</li>
+												
+													<li> In the Serialzer Input section, select radio button 'Content from a DFDL Test - Logical Instance'.</li>
+												
+													<li> Set the Encoding to ASCII.</li>
+												
+													<li> Click OK.</li>
+												
+											
+											</ul>
+											
+										
+										</li>
+									
+										<li> The results of the test serialize are displayed. You should see 'Serialization completed successfully' which can be dismissed.
+										
+										</li>
+									
+										<li> You can view the serialized data file in the DFDL Test - Serialize view. You can view a log of the serializer actions in the DFDL Test - Trace view.
+										
+										</li>
+									
+										<li> Repeat steps 2 through 7 for another example data file, INVOIC_D.03B_Interchange_with_UNA.txt.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+								<p> The supplied DFDL schemas will parse UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit EDIFACT-Service-Segments-4.1.xsd in the EDIFACT-Common library and change the DFDL expression used to set DFDL variable 'SegmentTerm' to the commented-out value. </p>
+								
+							
+								<p> If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit IBM_EDI_FORMAT.xsd in the EDIFACT-Common library and change DFDL variable 'RepeatSep' to have default value '+' instead of '*'. </p>
+								
+							
+								<p> If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit IBM_EDI_FORMAT.xsd in the EDIFACT-Common library and change DFDL variable 'DecimalSep' to have default value ',' instead of '.'. </p>
+								
+							
+								<p> The two shared libraries can be deployed to an integration node for use by message flows. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details"> 	
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20065_.htm')" title="Knowledge Center link to Testing a DFDL schema file">Testing a DFDL schema file</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+							   	
+							
+								
+								
+								<li> <a href="http://dfdlschemas.github.io/EDIFACT/" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
+									
+							
+							</ul>
+						</div>
+							
+					</div>
+					<div class="small-2 medium-2 large-2 columns">
+						<h4 class="tkaction"><a href="javascript:;" onclick="cleanUp()" title="Clean up and remove any changes made by the tutorial.">Clean up<img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+				    </div>
+				</div>	
+			</div> <!-- tab-content -->
+		</div> <!-- columns -->
+	  </div> <!-- row --></body>
+		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/vendor/jquery.js"></script>
+		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/vendor/foundation.min.js"></script>
+		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/main.js"></script>
+	</body>
+<!-- body::End -->
+
+</html>
