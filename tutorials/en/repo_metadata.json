@@ -19,7 +19,7 @@
            	"detailsURL"    : "https://smhdfdl.github.io/dfdl-edifact-tutorial/tutorialEDIFACTLibrary/en/details.html",
            	"stepsURL"      : "https://smhdfdl.github.io/dfdl-edifact-tutorial/tutorialEDIFACTLibrary/en/steps.html",
            	"zipURL"        : "https://github.com/ot4i/edifact-tutorial/edifact-tutorial.zip",
-           	"barFile"       : "",
+           	"barFile"       : "<workspace>/EDIFACT-D03B/foo.bar",
            	"visible"	: "true",
            	"tags"		: "dfdl;edifact",
            	"isPattern"	: "false",
@@ -33,6 +33,10 @@
        			                }
         		          ],
 		"deployedResources": [
+			{
+              "type": "library",
+              "path": "EDIFACT-D03B"
+            }
 				     ]
 	} 
       ]
