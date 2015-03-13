@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4>Modeling EDIFACT data</h4>
+	    <h4>Modeling EDIFACT data using DFDL</h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 	  	<div class="row">
@@ -160,7 +160,17 @@
 						  	<h4>Imported projects</h4>
 						    
 						    
-								<p> The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace. </p>
+								<p> The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Integration Development view of your workspace. </p>
+							
+								<p> DFDL schema EDIFACT-SupplyChain-Messages-D03.B.xsd in the EDIFACT-D03B library should be open for you using the DFDL editor. If it is not, double-click the DFDL schema and the editor will open. </p>
+							
+								<p> The Interchange message is highlighted and models a whole EDIFACT interchange. The main editor view shows the logical components of the message such as elements and sequences. You can explore the Interchange message structure by expanding the elements. </p>
+							
+								<p> The physical rendering of each logical component is described by the DFDL properties in the Representation Properties tab on the right. The value of a DFDL property can either be specified locally on the component, or can be inherited from a set of pre-defined DFDL property values. Inherited values have an icon shown next to them, and hovering over the icon reveals where the property is defined. In this schema, the properties are inherited from IBM_EDI_Format.xsd in the EDIFACT-Common library. </p>
+							
+								<p> You will be test parsing example EDIFACT data using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon). </p>
+							
+								<p> Tip: If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back. </p>
 							
 						</div>
 						
@@ -187,16 +197,12 @@
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
 						    
-								<p> The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace. </p>
+								<p> EDIFACT-SupplyChain-Messages-D.03B.xsd is open in the DFDL editor. The Interchange message should be highlighted in green. </p>
 								
 								
 									
 									<ol>
 									
-									
-										<li> In library EDIFACT-D03B, open EDIFACT-SupplyChain-Messages-D.03B.xsd using the DFDL editor. The Interchange message will be highlighted.
-										
-										</li>
 									
 										<li> Test parse an example data file:
 										
@@ -205,15 +211,17 @@
 											<ul>
 											
 												
-													<li> Click the Test Parse Model button. The Test Parse Model dialog opens.</li>
+													<li> Click the Test Parse Model button in the DFDL editor toolbar. The Test Parse Model dialog opens.</li>
 												
-													<li> In the Parser Input section, select radio button 'Content from a data file' and click Browse.</li>
+													<li> In the Message section, select Interchange.</li>
+												
+													<li> In the Parser Input section, select 'Content from a data file' and click Browse.</li>
 												
 													<li> Select file ORDERS_D.03B_Interchange.txt from EDIFACT-D03B and click OK.</li>
 												
 													<li> Set the Encoding to ASCII.</li>
 												
-													<li> Click OK and confirm the switch to the DFDL Test perspective.</li>
+													<li> Click OK. If asked to confirm switching to the DFDL Test perspective, click 'Yes'.</li>
 												
 											
 											</ul>
@@ -221,7 +229,7 @@
 										
 										</li>
 									
-										<li> The DFDL Test perspective opens, and the results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed.
+										<li> The results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed.
 										
 										</li>
 									
@@ -236,9 +244,9 @@
 											<ul>
 											
 												
-													<li> Click the Test Serialize Model button. The Test Serialize Model dialog opens.</li>
+													<li> Click the Test Serialize Model button in the DFDL editor toolbar. The Test Serialize Model dialog opens.</li>
 												
-													<li> In the Serialzer Input section, select radio button 'Content from a DFDL Test - Logical Instance'.</li>
+													<li> In the Serializer Input section, select 'Content from a DFDL Test - Logical Instance'.</li>
 												
 													<li> Set the Encoding to ASCII.</li>
 												
@@ -258,7 +266,11 @@
 										
 										</li>
 									
-										<li> Repeat steps 2 through 7 for another example data file, INVOIC_D.03B_Interchange_with_UNA.txt.
+										<li> Repeat steps 1 through 6 for another example data file, INVOIC_D.03B_Interchange_with_UNA.txt.
+										
+										</li>
+									
+										<li> As an alternative to the toolbar buttons, you can also test from the DFDL Test - Parse and DFDL Test - Serialize views, using the Browse button to select a data source and the green play icon to run the DFDL parser or serializer.
 										
 										</li>
 									
