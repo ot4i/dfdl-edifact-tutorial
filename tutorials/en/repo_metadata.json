@@ -12,7 +12,7 @@
       "visible": "true",
       "tutorials": [
 	{
-       	        "name"          : "Modeling EDIFACT data",
+       	        "name"          : "Modeling EDIFACT data using DFDL",
                 "version"	: "1.0",
                 "iibVersions"	: "10.*-11.*",
            	"shortDesc"     : "Learn how to model EDIFACT data using DFDL by exploring this simple example",
