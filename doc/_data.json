@@ -15,7 +15,7 @@
   },
   "tutorial":{
     "_common":{
-      "name":"Modeling EDIFACT data",
+      "name":"Modeling EDIFACT data using DFDL",
       "shortDescription":"Learn how to model EDIFACT data using DFDL by exploring this simple example.",
       "durationText":"This tutorial takes approximately",
       "durationTime":"5 minutes",
@@ -138,8 +138,23 @@
           "sections":[
             {
               "section":"The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace."
+            },
+            {
+              "section":"DFDL schema EDIFACT-SupplyChain-Messages-D03.B.xsd in the EDIFACT-D03B library should be opened for you using the DFDL editor. If it is not, double-click the DFDL schema and the editor will open." 
+            },
+            {
+              "section":"The Interchange message is highlighted and models a whole EDIFACT interchange. The main editor view shows the logical components of the message such as elements and sequences. You can explore the Interchange message structure by expanding the elements." 
+            },
+            {
+              "section":"The physical rendering of each logical component is described by the DFDL properties in the Representation Properties tab on the right. The value of a DFDL property can either be specified locally on the component, or can be inherited from a set of pre-defined DFDL property values. Inherited values have an icon shown next to them, and hovering over the icon reveals where the property is defined. In this schema, the properties are inherited from IBM_EDI_Format.xsd in the EDIFACT-Common library." 
+            },
+            {
+              "section":"You will be test parsing example EDIFACT data using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon)." 
+            },
+            {
+              "section":"Tip: If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back."
             }
-          ]
+          ]  
         },
         "helpLinks":{
           "title":"Find out more",
@@ -161,23 +176,23 @@
           "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
           "sections":[
             {
-              "section":"The EDIFACT-D03B and EDIFACT-Common libraries are shown in the Application Development view of your workspace.",
+              "section":"EDIFACT-SupplyChain-Messages-D.03B.xsd is open in the DFDL editor. The Interchange message should be highlighted in green.",
               "steps":{
                 "type":"ordered",
                 "details":[
-                  {
-                    "details":"In library EDIFACT-D03B, open EDIFACT-SupplyChain-Messages-D.03B.xsd using the DFDL editor. The Interchange message will be highlighted."
-                  },
                   {
                     "details":"Test parse an example data file:",
                     "substeps":{
                       "type":"unordered",
                       "details":[
                         {
-                          "details":"Click the Test Parse Model button. The Test Parse Model dialog opens."
+                          "details":"Click the Test Parse Model button in the DFDL editor toolbar. The Test Parse Model dialog opens."
                         },
                         {
-                          "details":"In the Parser Input section, select radio button 'Content from a data file' and click Browse."
+                          "details":"In the Message section, select Interchange."
+                        },
+                        {
+                          "details":"In the Parser Input section, select 'Content from a data file' and click Browse."
                         },
                         {
                           "details":"Select file ORDERS_D.03B_Interchange.txt from EDIFACT-D03B and click OK."
@@ -186,13 +201,13 @@
                           "details":"Set the Encoding to ASCII."
                         },
                         {
-                          "details":"Click OK and confirm the switch to the DFDL Test perspective."
+                          "details":"Click OK. If asked to confirm switching to the DFDL Test perspective, click 'Yes'."
                         }
                       ]
                     }
                   },
                   {
-                    "details":"The DFDL Test perspective opens, and the results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed."
+                    "details":"The results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed."
                   },
                   {
                     "details":"You can view the parsed data file in the DFDL Test - Parse view. The results of the parse can be viewed in the DFDL Test - Logical Instance view, as a tree or as XML. You can view a log of the parser actions in the DFDL Test - Trace view."
@@ -203,10 +218,10 @@
                       "type":"unordered",
                       "details":[
                         {
-                          "details":"Click the Test Serialize Model button. The Test Serialize Model dialog opens."
+                          "details":"Click the Test Serialize Model button in the DFDL editor toolbar. The Test Serialize Model dialog opens."
                         },
                         {
-                          "details":"In the Serialzer Input section, select radio button 'Content from a DFDL Test - Logical Instance'."
+                          "details":"In the Serializer Input section, select 'Content from a DFDL Test - Logical Instance'."
                         },
                         {
                           "details":"Set the Encoding to ASCII."
@@ -224,7 +239,10 @@
                     "details":"You can view the serialized data file in the DFDL Test - Serialize view. You can view a log of the serializer actions in the DFDL Test - Trace view."
                   },  
                   {
-                    "details":"Repeat steps 2 through 7 for another example data file, INVOIC_D.03B_Interchange_with_UNA.txt."
+                    "details":"Repeat steps 1 through 7 for another example data file, INVOIC_D.03B_Interchange_with_UNA.txt."
+                  },  
+                  {
+                    "details":"As an alternative to the toolbar buttons, you can also test from the DFDL Test - Parse and DFDL Test - Serialize views, using the Browse button to select a data source and the green play icon to run the DFDL parser or serializer."
                   }  
                 ]
               }
