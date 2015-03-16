@@ -1,18 +1,27 @@
 {
-  "version":"0.4",
-  "pageContent":{
-    "comments":"Must use underscore for en-us.",
-    "navItems":{
-      "_common":{
-        "buttonBackToGallery":{
-          "text":"Back To Gallery"
-        },
-        "buttonStartTutorial":{
-          "text":"Start Tutorial"
+  "version":"0.5",
+    "pageContent": 
+	{
+        "_comments": "JSON object that contains data for page labels, buttons, etc.",
+        "navItems": 
+		{
+            "_common": 
+			{
+                "buttonBackToGallery": 
+				{
+                    "name": "Back To Gallery",
+					"method": "backToGallery()",
+					"idName": "backToGallery"	
+                },
+                "buttonStartTutorial": 
+				{
+                    "name": "Start Tutorial",
+					"method": "startTutorialFromDetailsScreen()",
+					"idName": "startTutorial"
+                }
+            }
         }
-      }
-    }
-  },
+    },
   "tutorial":{
     "_common":{
       "name":"Modeling EDIFACT data using DFDL",
@@ -20,7 +29,12 @@
       "durationText":"This tutorial takes approximately",
       "durationTime":"5 minutes",
       "_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
-      "resourceToOpen":"MainSchema"
+      "resourceToOpen":"MainSchema",
+      "helpLink": 
+	{
+           "text": "IBM Knowledge Center",
+           "link": "/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm"
+        }
     },
     "pageDetails":{
       "topicsName":"Tutorial Topics",
@@ -128,7 +142,15 @@
             }
           ]
         },
-        "actionName":"Import"
+       "actions":{
+          "title": "Create Actions",
+          "details":[
+             {
+               "name": "Import",
+               "method": "importArtifacts()"
+             }
+           ]
+         }
       },
       "prepare":{
         "overview":{
@@ -152,10 +174,10 @@
               "section":"Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL Terminator, Separator, Escape Character and Decimal Separator properties are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the Variables tab next to Representation Properties on the right." 
             },
             {
-              "section":"You will be test parsing example EDIFACT data using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon)." 
+              "section":"You will be test parsing example EDIFACT data using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
             },
             {
-              "section":"Tip: If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back."
+              "section":"<b>Tip:</b> If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back."
             }
           ]  
         },
@@ -171,8 +193,6 @@
         }
       },
       "run":{
-        "cleanupName":"Clean up",
-        "cleanupDescription":"Clean up and remove any changes made by the tutorial.",
         "overview":{
           "name":"Run",
           "heading":"Follow these steps to complete the tutorial",
@@ -213,7 +233,7 @@
                     "details":"The results of the test parse are displayed. You should see 'Parsing completed successfully' which can be dismissed."
                   },
                   {
-                    "details":"You can view the parsed data file in the DFDL Test - Parse view. The results of the parse can be viewed in the DFDL Test - Logical Instance view, as a tree or as XML. You can view a log of the parser actions in the DFDL Test - Trace view."
+                    "details":"You can view the parsed data file in the <b>DFDL Test - Parse</b> view. The results of the parse can be viewed in the <b>DFDL Test - Logical Instance</b> view, as a tree or as XML. You can view a log of the parser actions in the <b>DFDL Test - Trace</b> view."
                   },
                   {
                     "details":"Test serialize the logical instance that resulted from the parse:",
@@ -239,13 +259,13 @@
                     "details":"The results of the test serialize are displayed. You should see 'Serialization completed successfully' which can be dismissed."
                   },
                   {
-                    "details":"You can view the serialized data file in the DFDL Test - Serialize view. You can view a log of the serializer actions in the DFDL Test - Trace view."
+                    "details":"You can view the serialized data file in the <b>DFDL Test - Serialize</b> view. You can view a log of the serializer actions in the <b>DFDL Test - Trace</b> view."
                   },  
                   {
                     "details":"Repeat steps 1 through 6 for another example data file, INVOIC_D.03B_Interchange_with_UNA.txt."
                   },  
                   {
-                    "details":"As an alternative to the toolbar buttons, you can also test from the DFDL Test - Parse and DFDL Test - Serialize views, using the Browse button to select a data source and the green play icon to run the DFDL parser or serializer."
+                    "details":"As an alternative to the toolbar buttons, you can also test from the <b>DFDL Test - Parse</b> and <b>DFDL Test - Serialize</b> views, using the Browse button to select a data source and the green play icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png' alt='' /> to run the DFDL parser or serializer."
                   }  
                 ]
               }
@@ -284,7 +304,22 @@
               "type":"web"
             }
           ]
-        }
+        },
+       "actions":{
+          "title": "Run Actions",
+          "details":[
+           ]
+         },
+	"exits":{
+	  "title": "Run Exits",
+	  "details":[
+	     {
+	     	"name": "Clean Up",
+	     	"description": "Clean up and remove any changes in your workspace made by the tutorial.",
+	     	"method": "cleanUp()"
+	     }
+	   ]
+	 }
       }
     }
   }
