@@ -305,12 +305,7 @@
             }
           ]
         },
-       "actions":{
-          "title": "Run Actions",
-          "details":[
-           ]
-         },
-	"exits":{
+        "exits":{
 	  "title": "Run Exits",
 	  "details":[
 	     {
