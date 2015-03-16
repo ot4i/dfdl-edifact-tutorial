@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
 <html class="no-js" lang="en">
  
 	
@@ -9,6 +7,7 @@
 		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
   		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		
+		<!-- Next 2 http=equiv headers required to disable caching the Eclipse Browser Widget -->
 		<meta http-equiv="Pragma" content="no-cache">
   		<meta http-equiv="Expires" content="-1">
 
@@ -26,11 +25,12 @@
 		<title>IBM Integration Bus V10 Tutorial</title>
 
     	<link rel="stylesheet" href="http://ot4i.github.io/ot4i.tutorials/dist/css/main.css" />
+		<link rel="stylesheet" href="http://ot4i.github.io/ot4i.tutorials/dist/css/app.css" />
     	
-    	<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/json2.js"></script>
-    	<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/js2java.js"></script>
+		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/json2.js"></script>
+		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/js2java.js"></script>
 		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/js2java_steps.js"></script>
-  		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/vendor/modernizr.js"></script>
+		<script src="http://ot4i.github.io/ot4i.tutorials/dist/js/vendor/modernizr.js"></script>
 	</head>
 <!-- header::End -->
 <!-- body::Start -->
@@ -46,20 +46,19 @@
 	    <h4>Modeling EDIFACT data using DFDL</h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
-	  	<div class="row">
-	    	<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
-		</div>
+		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
 	  </div>
 	</div> 
 	<hr>
 	<div class="row">
-	  <div class="small-9 medium-10 large-10 columns">
-	    <h5> Learn how to model EDIFACT data using DFDL by exploring this simple example. </h5>
-	  </div>
+		<div class="small-10 medium-10 large-10 columns">
+		<h5> Learn how to model EDIFACT data using DFDL by exploring this simple example. </h5>
+		</div>
+		<div class="small-2 medium-2 large-2 columns">
 			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
 			</div>
+		</div>
 	</div>
-
 	<div class="row">          
 		  <div class="small-12 medium-12 large-12 columns">
 			<ul class="tabs vertical"> 
@@ -124,7 +123,9 @@
 					</div>
 				</div>
 		    	<div class="content" id="panel21">
+		    		
 		    		<div class="small-10 medium-10 large-10 columns divider">
+					
 				      	<div class="row content-details">
 					      	<h4>Import projects</h4>
 					        
@@ -150,12 +151,19 @@
 						</div>
 						
 					</div>
+					
 					<div class="small-2 medium-2 large-2 columns">
-					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainSchema')"> Import <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>						
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainSchema')"> Import <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+										
 				    </div>
+					
 		    	</div>
 		    	<div class="content" id="panel31">
-		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+					<div class="small-12 medium-12 large-12 columns">
+					
 						<div class="row content-details">
 						  	<h4>Imported projects</h4>
 						    
@@ -170,9 +178,9 @@
 							
 								<p> Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL Terminator, Separator, Escape Character and Decimal Separator properties are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the Variables tab next to Representation Properties on the right. </p>
 							
-								<p> You will be test parsing example EDIFACT data using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon). </p>
+								<p> You will be test parsing example EDIFACT data using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective using Window->Open Perspective and choose 'DFDL Test' (or use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
 							
-								<p> Tip: If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back. </p>
+								<p> <b>Tip:</b> If this Tutorial Steps View disappears when you switch perspectives, use Window->Show View to add it back. </p>
 							
 						</div>
 						
@@ -189,12 +197,12 @@
 						</div>
 							
 					</div>
-					<div class="small-2 medium-2 large-2 columns">
-						<h4 class="tkaction"><a href="javascript:;" onclick="deployArtifacts()"> undefined <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
-				    </div>
+					
 		    	</div>
 		    	<div class="content" id="panel41">
+		    		
 		    		<div class="small-10 medium-10 large-10 columns divider">
+					
 				    	<div class="row content-details">
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
@@ -235,7 +243,7 @@
 										
 										</li>
 									
-										<li> You can view the parsed data file in the DFDL Test - Parse view. The results of the parse can be viewed in the DFDL Test - Logical Instance view, as a tree or as XML. You can view a log of the parser actions in the DFDL Test - Trace view.
+										<li> You can view the parsed data file in the <b>DFDL Test - Parse</b> view. The results of the parse can be viewed in the <b>DFDL Test - Logical Instance</b> view, as a tree or as XML. You can view a log of the parser actions in the <b>DFDL Test - Trace</b> view.
 										
 										</li>
 									
@@ -264,7 +272,7 @@
 										
 										</li>
 									
-										<li> You can view the serialized data file in the DFDL Test - Serialize view. You can view a log of the serializer actions in the DFDL Test - Trace view.
+										<li> You can view the serialized data file in the <b>DFDL Test - Serialize</b> view. You can view a log of the serializer actions in the <b>DFDL Test - Trace</b> view.
 										
 										</li>
 									
@@ -272,7 +280,7 @@
 										
 										</li>
 									
-										<li> As an alternative to the toolbar buttons, you can also test from the DFDL Test - Parse and DFDL Test - Serialize views, using the Browse button to select a data source and the green play icon to run the DFDL parser or serializer.
+										<li> As an alternative to the toolbar buttons, you can also test from the <b>DFDL Test - Parse</b> and <b>DFDL Test - Serialize</b> views, using the Browse button to select a data source and the green play icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png" alt> to run the DFDL parser or serializer.
 										
 										</li>
 									
@@ -318,9 +326,18 @@
 						</div>
 							
 					</div>
+					
 					<div class="small-2 medium-2 large-2 columns">
-						<h4 class="tkaction"><a href="javascript:;" onclick="cleanUp()" title="Clean up and remove any changes made by the tutorial.">Clean up<img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+					
+					
+					<hr>
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="cleanUp()" title="Clean up and remove any changes in your workspace made by the tutorial."> Clean Up <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/close-cancel-error_128-red.png"></a></h4>
+				    
+					
 				    </div>
+					
 				</div>	
 			</div> <!-- tab-content -->
 		</div> <!-- columns -->
