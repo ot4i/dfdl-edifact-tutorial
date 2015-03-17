@@ -3,7 +3,7 @@
       "project" : "EDIFACT-D03B",
       "artefact": "EDIFACT-SupplyChain-Messages-D.03B.xsd",
       "editor"  : "dfdl"
-    }
+    },
     "bar" : {
         "build" : false
     }
