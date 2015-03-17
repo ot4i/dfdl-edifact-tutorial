@@ -125,10 +125,10 @@
               "section":"Two shared libraries are imported into your workspace."
             },
             {
-              "section":"Library <span="library">EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library."
+              "section":"Library <span='library'>EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library."
             },
             {
-              "section":"Library <span="library">EDIFACT-Common</span> contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4." 
+              "section":"Library <span='library'>EDIFACT-Common</span> contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4." 
             }
           ]
         },
@@ -159,25 +159,25 @@
           "_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
           "sections":[
             {
-              "section":"The <span="library">EDIFACT-D03B</span> and <span="library">EDIFACT-Common</span> libraries are shown in the Integration Development view of your workspace."
+              "section":"The <span='library'>EDIFACT-D03B</span> and <span='library'>EDIFACT-Common</span> libraries are shown in the Integration Development view of your workspace."
             },
             {
-              "section":"The DFDL schema <span="filepath">EDIFACT-SupplyChain-Messages-D.03B.xsd</span> file in the <span="library">EDIFACT-D03B</span> library opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor." 
+              "section":"The DFDL schema <span='filepath'>EDIFACT-SupplyChain-Messages-D.03B.xsd</span> file in the <span='library'>EDIFACT-D03B</span> library opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor." 
             },
             {
               "section":"The Interchange message is highlighted and it models a whole EDIFACT interchange. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Interchange message structure by expanding the elements." 
             },
             {
-              "section":"The physical rendering of each logical component is described by the DFDL properties in the <span="uicontrol">Representation Properties</span> tab. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span="filepath">IBM_EDI_Format.xsd</span> file in the <span="library">EDIFACT-Common</span> library." 
+              "section":"The physical rendering of each logical component is described by the DFDL properties in the <span='uicontrol'>Representation Properties</span> tab. DFDL properties can either be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from the <span='filepath'>IBM_EDI_Format.xsd</span> file in the <span='library'>EDIFACT-Common</span> library." 
             },
             {
-              "section":"Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL Terminator, Separator, Escape Character and Decimal Separator properties are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the <span="uicontrol">Variables</span> tab next to Representation Properties." 
+              "section":"Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL Terminator, Separator, Escape Character and Decimal Separator properties are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the <span='uicontrol'>Variables</span> tab next to Representation Properties." 
             },
             {
-              "section":"You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective by clicking <span="uicontrol">Window &gt; Open Perspective</span> and then clicking <span="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
+              "section":"You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective by clicking <span='uicontrol'>Window &gt; Open Perspective</span> and then clicking <span='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
             },
             {
-              "section":"<b>Tip:</b> If this <span="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span="uicontrol">Window &gt; Show View</span> menu option to add it back."
+              "section":"<b>Tip:</b> If this <span='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span='uicontrol'>Window &gt; Show View</span> menu option to add it back."
             }
           ]  
         },
@@ -199,7 +199,7 @@
           "_runComment":"The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
           "sections":[
             {
-              "section":"The <span="filepath">EDIFACT-SupplyChain-Messages-D.03B.xsd</span> file is open in the DFDL editor. The Interchange message should be highlighted in green.",
+              "section":"The <span='filepath'>EDIFACT-SupplyChain-Messages-D.03B.xsd</span> file is open in the DFDL editor. The Interchange message should be highlighted in green.",
               "steps":{
                 "type":"ordered",
                 "details":[
@@ -209,31 +209,31 @@
                       "type":"unordered",
                       "details":[
                         {
-                          "details":"Click the <span="uicontrol">Test Parse Model</span> button in the DFDL editor toolbar. The <span="wintitle">Test Parse Model</span> window opens."
+                          "details":"Click the <span='uicontrol'>Test Parse Model</span> button in the DFDL editor toolbar. The <span='wintitle'>Test Parse Model</span> window opens."
                         },
                         {
-                          "details":"In the Message section, select <span="uicontrol">Interchange</span>."
+                          "details":"In the Message section, select <span='uicontrol'>Interchange</span>."
                         },
                         {
-                          "details":"In the Parser Input section, select <span="uicontrol">Content from a data file</span> and then click <span="uicontrol">Browse</span>."
+                          "details":"In the Parser Input section, select <span='uicontrol'>Content from a data file</span> and then click <span='uicontrol'>Browse</span>."
                         },
                         {
-                          "details":"Select the <span="filepath">ORDERS_D.03B_Interchange.txt</span> file from EDIFACT-D03B and then click <span="uicontrol">OK</span>."
+                          "details":"Select the <span='filepath'>ORDERS_D.03B_Interchange.txt</span> file from EDIFACT-D03B and then click <span='uicontrol'>OK</span>."
                         },
                         {
                           "details":"Set the Encoding to ASCII."
                         },
                         {
-                          "details":"Click <span="uicontrol">OK</span>. If asked to confirm switching to the DFDL Test perspective, click <span="uicontrol>Yes</span>."
+                          "details":"Click <span='uicontrol'>OK</span>. If asked to confirm switching to the DFDL Test perspective, click <span='uicontrol'>Yes</span>."
                         }
                       ]
                     }
                   },
                   {
-                    "details":"The results of the test parse are displayed. You should see the message <span="systemoutput">Parsing completed successfully</span>. You can dismiss this message."
+                    "details":"The results of the test parse are displayed. You should see the message <span='systemoutput'>Parsing completed successfully</span>. You can dismiss this message."
                   },
                   {
-                    "details":"You can view the parsed data file in the <span="uicontrol">DFDL Test - Parse</span> view. The results of the parse can be viewed in the <span="uicontrol">DFDL Test - Logical Instance</span> view, as a tree or as XML. You can view a log of the parser actions in the <span="uicontrol">DFDL Test - Trace</span> view."
+                    "details":"You can view the parsed data file in the <span='uicontrol'>DFDL Test - Parse</span> view. The results of the parse can be viewed in the <span='uicontrol'>DFDL Test - Logical Instance</span> view, as a tree or as XML. You can view a log of the parser actions in the <span='uicontrol'>DFDL Test - Trace</span> view."
                   },
                   {
                     "details":"Test serialize the logical instance that resulted from the parse:",
@@ -241,43 +241,43 @@
                       "type":"unordered",
                       "details":[
                         {
-                          "details":"Click the <span="uicontrol">Test Serialize Model</span> button in the DFDL editor toolbar. The <span="wintitle">Test Serialize Model</span> window opens."
+                          "details":"Click the <span='uicontrol'>Test Serialize Model</span> button in the DFDL editor toolbar. The <span='wintitle'>Test Serialize Model</span> window opens."
                         },
                         {
-                          "details":"In the Serializer Input section, select <span="uicontrol">Content from a DFDL Test - Logical Instance</span>."
+                          "details":"In the Serializer Input section, select <span='uicontrol'>Content from a DFDL Test - Logical Instance</span>."
                         },
                         {
                           "details":"Set the Encoding to ASCII."
                         },
                         {
-                          "details":"Click <span="uicontrol">OK</span>."
+                          "details":"Click <span='uicontrol'>OK</span>."
                         }
                       ]
                     }
                   },
                   {
-                    "details":"The results of the test serialize are displayed. You should see the message <span="systemoutput">Serialization completed successfully</span> displayed. You can dismiss this message."
+                    "details":"The results of the test serialize are displayed. You should see the message <span='systemoutput'>Serialization completed successfully</span> displayed. You can dismiss this message."
                   },
                   {
-                    "details":"You can view the serialized data file in the <span="uicontrol">DFDL Test - Serialize</span> view. You can view a log of the serializer actions in the <span="uicontrol">DFDL Test - Trace</span> view."
+                    "details":"You can view the serialized data file in the <span='uicontrol'>DFDL Test - Serialize</span> view. You can view a log of the serializer actions in the <span='uicontrol'>DFDL Test - Trace</span> view."
                   },  
                   {
-                    "details":"Repeat steps 1 through 6 for the <span="filepath">INVOIC_D.03B_Interchange_with_UNA.txt</span> example data file."
+                    "details":"Repeat steps 1 through 6 for the <span='filepath'>INVOIC_D.03B_Interchange_with_UNA.txt</span> example data file."
                   },  
                   {
-                    "details":"As an alternative to the toolbar buttons, you can also test from the <span="uicontrol">DFDL Test - Parse</span> and <span="uicontrol">DFDL Test - Serialize</span> views, using the <span="uicontrol">Browse</span> button to select a data source and the green play icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png' alt='' /> to run the DFDL parser or serializer."
+                    "details":"As an alternative to the toolbar buttons, you can also test from the <span='uicontrol'>DFDL Test - Parse</span> and <span='uicontrol'>DFDL Test - Serialize</span> views, using the <span='uicontrol'>Browse</span> button to select a data source and the green play icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png' alt='' /> to run the DFDL parser or serializer."
                   }  
                 ]
               }
             },  
             {
-              "section":"The supplied DFDL schemas parses UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit the <span="filepath">EDIFACT-Service-Segments-4.1.xsd</span> file in the EDIFACT-Common library and change the DFDL expression used by setting the <span="varname">SegmentTerm DFDL</span> variable to the commented-out value."
+              "section":"The supplied DFDL schemas parses UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit the <span='filepath'>EDIFACT-Service-Segments-4.1.xsd</span> file in the EDIFACT-Common library and change the DFDL expression used by setting the <span='varname'>SegmentTerm DFDL</span> variable to the commented-out value."
             },
             {
-              "section":"If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit the <span="filepath">IBM_EDI_FORMAT.xsd</span> file in the <span="library">EDIFACT-Common</span> library. In this file, set the <span="varname">RepeatSep</span> DFDL variable to take the default value '+' (plus) instead of '*' (asterisk)."
+              "section":"If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit the <span='filepath'>IBM_EDI_FORMAT.xsd</span> file in the <span='library'>EDIFACT-Common</span> library. In this file, set the <span='varname'>RepeatSep</span> DFDL variable to take the default value '+' (plus) instead of '*' (asterisk)."
             },
             {
-              "section":"If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit the <span="filepath">IBM_EDI_FORMAT.xsd</span> file in the <span="library">EDIFACT-Common</span> library and change the <span="varname">DecimalSep</span> DFDL variable to take the default value ',' (comma) instead of '.' (period)."
+              "section":"If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit the <span='filepath'>IBM_EDI_FORMAT.xsd</span> file in the <span='library'>EDIFACT-Common</span> library and change the <span='varname'>DecimalSep</span> DFDL variable to take the default value ',' (comma) instead of '.' (period)."
             },
             {
               "section":"The two shared libraries can be deployed to an integration node for use by message flows."
