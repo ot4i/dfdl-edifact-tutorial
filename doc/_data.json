@@ -125,7 +125,7 @@
               "section":"Two shared libraries are imported into your workspace."
             },
             {
-              "section":"Library EDIFACT-D03B contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library."
+              "section":"Library <span class='uicontrol'>EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library."
             },
             {
               "section":"Library EDIFACT-Common contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4." 
