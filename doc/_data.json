@@ -78,7 +78,7 @@
             "section":"This tutorial demonstrates the modeling of UN/EDIFACT data using DFDL schema. The DFDL schema editor is used to view the model and parse example EDIFACT data files."
           },
           {
-            "section":"EDIFACT is an international standard for EDI trading in commercial and non-commercial sectors. UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages, which consist of segments, which in turn consist of composites. Composites in turn consist of elements. Segments, composites, and elements are delimited by separators. Only segments have initiators." 
+            "section":"UN/EDIFACT is an international standard for EDI trading in commercial and non-commercial sectors. UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages, which consist of segments, which in turn consist of composites. Composites in turn consist of elements. Segments, composites, and elements are delimited by separators. Only segments have initiators." 
           },
           {
             "section":"An interchange starts with a UNB segment and ends with a UNZ segment. A message starts with a UNH segment and ends with a UNT segment. An element in the UNH segment identifies the message type. Messages may be grouped into functional groups, which start with a UNG segment and end with a UNE segment. Optionally, the interchange can start with a UNA segment that defines the delimiters used by the interchange; defaults are used if there is no UNA." 
@@ -256,7 +256,7 @@
                     }
                   },
                   {
-                    "details":"The results of the test serialize are displayed. You should see the message <span class='systemoutput'>Serialization completed successfully</span> displayed. You can dismiss this message."
+                    "details":"The results of the test serialize are displayed. You should see the message <span class='systemoutput'>Serialization completed successfully</span>. You can dismiss this message."
                   },
                   {
                     "details":"You can view the serialized data file in the <span class='uicontrol'>DFDL Test - Serialize</span> view. You can view a log of the serializer actions in the <span class='uicontrol'>DFDL Test - Trace</span> view."
@@ -274,10 +274,10 @@
               "section":"The supplied DFDL schemas parse UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit the <span class='filepath'>EDIFACT-Service-Segments-4.1.xsd</span> file in the EDIFACT-Common library and change the DFDL expression used by setting the <span class='varname'>SegmentTerm DFDL</span> variable to the commented-out value."
             },
             {
-              "section":"If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit the <span class='filepath'>IBM_EDI_FORMAT.xsd</span> file in the <span class='library'>EDIFACT-Common</span> library. In this file, set the <span class='varname'>RepeatSep</span> DFDL variable to take the default value '+' (plus) instead of '*' (asterisk)."
+              "section":"If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit the <span class='filepath'>IBM_EDI_Format.xsd</span> file in the <span class='library'>EDIFACT-Common</span> library. In this file, set the <span class='varname'>RepeatSep</span> DFDL variable to take the default value '+' (plus) instead of '*' (asterisk)."
             },
             {
-              "section":"If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit the <span class='filepath'>IBM_EDI_FORMAT.xsd</span> file in the <span class='library'>EDIFACT-Common</span> library and change the <span class='varname'>DecimalSep</span> DFDL variable to take the default value ',' (comma) instead of '.' (period)."
+              "section":"If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit the <span class='filepath'>IBM_EDI_Format.xsd</span> file in the <span class='library'>EDIFACT-Common</span> library. In this file, change the <span class='varname'>DecimalSep</span> DFDL variable to take the default value ',' (comma) instead of '.' (period)."
             },
             {
               "section":"The two shared libraries can be deployed to an integration node for use by message flows."
