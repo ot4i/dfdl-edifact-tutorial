@@ -122,7 +122,7 @@
           "_createComment":"A description of what will happen when the user clicks Import.",
           "sections":[
             {
-              "section":"Click 'Import' and a shared library is imported into your workspace."
+              "section":"Click 'Import' and two shared libraries are imported into your workspace."
             },
             {
               "section":"Library <span class='library'>EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library."
