@@ -125,7 +125,7 @@
               "section":"Click 'Import' and two shared libraries are imported into your workspace."
             },
             {
-              "section":"Library <span class='library'>EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Message types INVOIC and ORDERS are provided. Test data files are included in the library."
+              "section":"Library <span class='library'>EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Definitions for message types INVOIC and ORDERS are provided. Test data files are included in the library."
             },
             {
               "section":"Library <span class='library'>EDIFACT-Common</span> contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4." 
@@ -171,7 +171,7 @@
               "section":"The physical rendering of each logical component is described by the DFDL properties in the <span class='uicontrol'>Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png' alt='' /> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from schema <span class='filepath'>IBM_EDI_Format.xsd</span> in the <span class='library'>EDIFACT-Common</span> library." 
             },
             {
-              "section":"Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL Terminator, Separator, Escape Character and Decimal Separator properties are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the <span class='uicontrol'>Variables</span> tab next to <span class='uicontrol'>Representation Properties</span>." 
+              "section":"Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL properties <span class='varname'>Terminator</span>, <span class='varname'>Separator</span>, <span class='varname'>Escape Character</span> and <span class='varname'>Decimal Separator</span> are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the <span class='uicontrol'>Variables</span> tab next to <span class='uicontrol'>Representation Properties</span>." 
             },
             {
               "section":"You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective by clicking <span class='uicontrol'>Window &gt; Open Perspective</span> and then clicking <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
@@ -271,7 +271,7 @@
               }
             },  
             {
-              "section":"The supplied DFDL schemas parse UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit the <span class='filepath'>EDIFACT-Service-Segments-4.1.xsd</span> file in the EDIFACT-Common library and change the DFDL expression used by setting the <span class='varname'>SegmentTerm DFDL</span> variable to the commented-out value."
+              "section":"The supplied DFDL schemas parse UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit the <span class='filepath'>EDIFACT-Service-Segments-4.1.xsd</span> file in the <span class='library'>EDIFACT-Common</span> library and change the DFDL expression used by setting the <span class='varname'>SegmentTerm</span> DFDL variable to the commented-out value."
             },
             {
               "section":"If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit the <span class='filepath'>IBM_EDI_Format.xsd</span> file in the <span class='library'>EDIFACT-Common</span> library. In this file, set the <span class='varname'>RepeatSep</span> DFDL variable to take the default value '+' (plus) instead of '*' (asterisk)."
