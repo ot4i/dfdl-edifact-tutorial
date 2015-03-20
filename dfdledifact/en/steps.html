@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4>Modeling EDIFACT data by using DFDL</h4>
+	    <h4>Modeling COBOL data by using DFDL</h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -52,7 +52,7 @@
 	<hr>
 	<div class="row">
 		<div class="small-10 medium-10 large-10 columns">
-		<h5> Learn how to model EDIFACT data by using Data Format Description Language (DFDL). </h5>
+		<h5> Learn how to model COBOL data by using Data Format Description Language (DFDL). </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
 			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
@@ -83,13 +83,11 @@
 					      	<h4>Overview</h4>
 					        
 						    
-								<p> This tutorial demonstrates the modeling of UN/EDIFACT data using DFDL schema. The DFDL schema editor is used to view the model and parse example EDIFACT data files. </p>
+								<p> COBOL is a programming language most commonly used on mainframe computers. In-memory COBOL data structures are defined either in COBOL programs or COBOL copybooks. These data structures are commonly written to files or message queues. </p>
 							
-								<p> UN/EDIFACT is an international standard for EDI trading in commercial and non-commercial sectors. UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages, which consist of segments, which in turn consist of composites. Composites in turn consist of elements. Segments, composites, and elements are delimited by separators. Only segments have initiators. </p>
+								<p> COBOL data structures can contain fields of several different physical types, including character strings (PIC X), zoned decimals (PIC 9), packed decimals (PIC 9 COMP-3) and two's complement integers (PIC 9 COMP). </p>
 							
-								<p> An interchange starts with a UNB segment and ends with a UNZ segment. A message starts with a UNH segment and ends with a UNT segment. An element in the UNH segment identifies the message type. Messages may be grouped into functional groups, which start with a UNG segment and end with a UNE segment. Optionally, the interchange can start with a UNA segment that defines the delimiters used by the interchange; defaults are used if there is no UNA. </p>
-							
-								<p> UN/EDIFACT data streams adopt one of several syntax levels, the most common versions being version 3 or version 4. </p>
+								<p> The DFDL editor provides a COBOL importer which can read COBOL copybooks and programs and generate the equivalent DFDL schema. </p>
 							
 						</div>
 							
@@ -109,13 +107,8 @@
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd22930_.htm')" title="Knowledge Center link to Working with COBOL data">Working with COBOL data</a> </li>
 							   	
-							
-								
-								
-								<li> <a href="http://dfdlschemas.github.io/EDIFACT/" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
-									
 							
 							</ul>
 						</div>	
@@ -127,16 +120,82 @@
 		    		<div class="small-10 medium-10 large-10 columns divider">
 					
 				      	<div class="row content-details">
-					      	<h4>Import projects</h4>
+					      	<h4>Import projects and create schema</h4>
 					        
 						    
-								<p> Click 'Import' and two shared libraries are imported into your workspace. </p>
+								<p> Click <span class="uicontrol">Import and a shared library is imported into your workspace. </span></p>
 								
 							
-								<p> Library <span class="library">EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Definitions for message types INVOIC and ORDERS are provided. Test data files are included in the library. </p>
+								<p> Library <span class="library">COBOL-Purchases</span> contains a COBOL copybook called <span class="filepath">PurchaseData.cpy</span> in 'Other resources'. It defines a COBOL data structure that records the purchases made by a customer. Open the copybook and look at the COBOL structure which is called PurchaseData. The main points of interest are: </p>
 								
 							
-								<p> Library <span class="library">EDIFACT-Common</span> contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4. </p>
+								<p>  </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> OCCURS DEPENDING ON. The purchases are recorded by an array of Item structures. There can be between 1 and 50 occurrences of Item, with the actual number provided by the ItemCount field at the start of the data.
+										
+										</li>
+									
+										<li> REDEFINES. Structure ItemGrocery is followed by structure ItemNonGrocery which overlays it. This means that either ItemGrocery or ItemNonGrocery will be present, but not both. The preceding ItemType field indicates which is actually present.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+								<p> You will now create a DFDL schema to model the COBOL PurchaseData structure, using the <span class="wintitle">New Message Model</span> wizard. </p>
+								
+							
+								<p> <b>Tip:</b> Ensure that steps 1 to 7 below are all visible in the <span class="uicontrol">Tutorial Steps View</span> before proceeding. </p>
+								
+							
+								<p>  </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> With <span class="filepath">PurchaseData.cpy</span> selected, click <span class="uicontrol">New...</span> in the <span class="uicontrol">Application Development</span> view, then select <span class="uicontrol">Message Model...</span>. The <span class="wintitle">New Message Model</span> wizard opens.
+										
+										</li>
+									
+										<li> Select <span class="uicontrol">COBOL</span> then click <span class="uicontrol">Next</span>.
+										
+										</li>
+									
+										<li> Select the option <span class="uicontrol">Create a DFDL schema file by importing a COBOL copybook or program</span> then click <span class="uicontrol">Next</span>.
+										
+										</li>
+									
+										<li> <span class="filepath">PurchaseData.cpy</span> should be highlighted. Click <span class="uicontrol">Next</span>.
+										
+										</li>
+									
+										<li> The wizard loads and compiles the copybook, and presents all the 01 level structures it finds. Click the <span class="uicontrol">&gt;&gt;</span> button then click <span class="uicontrol">Next</span>.
+										
+										</li>
+									
+										<li> Here you can choose settings for DFDL properties such as default values, null values and padding characters. Leave the options to default and click <span class="uicontrol">Next</span>.
+										
+										</li>
+									
+										<li> Here you can choose platform dependent settings such as encoding and zoned decimal sign representation. Leave the options to default and click <span class="uicontrol">Next</span>.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+								<p> Two DFDL schemas are created in the library. Schema <span class="filepath">PurchaseData.xsd</span> models the overall COBOL data structure. Schema <span class="filepath">CobolDataDefinitionFormat.xsd</span> defines suitable default values for DFDL properties. The imported copybook is copied into the importFile folder and a report is created in the log folder. </p>
 								
 							
 						</div>
@@ -158,7 +217,7 @@
 					<div class="small-2 medium-2 large-2 columns">
 					
 					
-					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainSchema')"> Import <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainCopybook')"> Import <img class="icon-image" src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
 										
 				    </div>
 					
@@ -171,22 +230,22 @@
 						  	<h4>Exploring the schemas</h4>
 						    
 						    
-								<p> The <span class="library">EDIFACT-D03B</span> and <span class="library">EDIFACT-Common</span> libraries are shown in the <span class="uicontrol">Application Development</span> view of your workspace. </p>
+								<p> The <span class="library">COBOL-Purchases</span> library is shown in the <span class="uicontrol">Application Development</span> view of your workspace. </p>
 								
 							
-								<p> The <span class="filepath">EDIFACT-SupplyChain-Messages-D.03B.xsd</span> DFDL schema in the <span class="library">EDIFACT-D03B</span> library opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor. </p>
+								<p> The <span class="filepath">PurchaseData.xsd</span> DFDL schema opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor. </p>
 								
 							
-								<p> The Interchange message is highlighted and it models a whole EDIFACT interchange. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Interchange message structure by expanding the elements. </p>
+								<p> The PurchaseData message is highlighted and models the COBOL PurchaseData structure from the copybook. The main editor view shows the logical components of the message such as elements and sequences. You can explore the PurchaseData structure by expanding the elements. </p>
 								
 							
-								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from schema <span class="filepath">IBM_EDI_Format.xsd</span> in the <span class="library">EDIFACT-Common</span> library. </p>
+								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from schema <span class="filepath">CobolDataDefinitionFormat.xsd</span>. </p>
 								
 							
-								<p> Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL properties <span class="varname">Terminator</span>, <span class="varname">Separator</span>, <span class="varname">Escape Character</span> and <span class="varname">Decimal Separator</span> are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the <span class="uicontrol">Variables</span> tab next to <span class="uicontrol">Representation Properties</span>. </p>
+								<p> The COBOL REDEFINES within Item has been imported as <span class="varname">xs:choice</span>. The COBOL OCCURS DEPENDING ON has resulted in the DFDL property <span class="varname">Occurs Count Kind</span> for Item being set to 'expression', and the DFDL property <span class="varname">Occurs Count</span> is a DFDL expression that refers to ItemCount. </p>
 								
 							
-								<p> You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the DFDL Test perspective by clicking <span class="uicontrol">Window &gt; Open Perspective</span> and then clicking <span class="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
+								<p> You will be test parsing an example binary data file using the PurchaseData message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class="uicontrol">DFDL Test</span> perspective by clicking <span class="uicontrol">Window &gt; Open Perspective</span> and then clicking <span class="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
 								
 							
 								<p> <b>Tip:</b> If this <span class="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class="uicontrol">Window &gt; Show View</span> menu option to add it back. </p>
@@ -217,14 +276,17 @@
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
 						    
-								<p> The <span class="filepath">EDIFACT-SupplyChain-Messages-D.03B.xsd</span> DFDL schema is open in the DFDL editor. The Interchange message should be highlighted in green. </p>
+								<p> The <span class="filepath">PurchaseData.xsd</span> DFDL schema is open in the DFDL editor. The PurchaseData message should be highlighted in green. </p>
+								
+							
+								<p>  </p>
 								
 								
 									
 									<ol>
 									
 									
-										<li> Test parse an example data file:
+										<li> Test parse an example COBOL file:
 										
 										
 											
@@ -233,11 +295,11 @@
 												
 													<li> Click the <span class="uicontrol">Test Parse Model</span> button in the DFDL editor toolbar. The <span class="wintitle">Test Parse Model</span> window opens.</li>
 												
-													<li> In the Message section, select <span class="uicontrol">Interchange</span>.</li>
+													<li> In the Message section, select <span class="uicontrol">PurchaseData</span>.</li>
 												
-													<li> In the Parser Input section, select <span class="uicontrol">Content from a data file</span> and then click <span class="uicontrol">Browse</span>.</li>
+													<li> In the Parser Input section, select <span class="uicontrol">Content from a data file</span> then click <span class="uicontrol">Browse</span>.</li>
 												
-													<li> Select the <span class="filepath">ORDERS_D.03B_Interchange.txt</span> file from <span class="library">EDIFACT-D03B</span> and then click <span class="uicontrol">OK</span>.</li>
+													<li> Select the <span class="filepath">PurchaseData1.bin</span> file from <span class="library">COBOL-Purchases</span> then click <span class="uicontrol">OK</span>.</li>
 												
 													<li> Set the Encoding to <span class="uicontrol">ASCII</span>.</li>
 												
@@ -253,7 +315,19 @@
 										
 										</li>
 									
-										<li> You can view the parsed data file in the <span class="uicontrol">DFDL Test - Parse</span> view. The results of the parse can be viewed in the <span class="uicontrol">DFDL Test - Logical Instance</span> view, as a tree or as XML. You can view a log of the parser actions in the <span class="uicontrol">DFDL Test - Trace</span> view.
+										<li> You can view the parsed data file in the <span class="uicontrol">DFDL Test - Parse</span> view. The results of the parse can be viewed in the <span class="uicontrol">DFDL Test - Logical Instance</span> view, as a tree or as XML. If you expand Invoice and then each Item, you can see that the parser has correctly resolved the <span class="varname">xs:choice</span> to either ItemGrocery or ItemNonGrocery.
+										
+										</li>
+									
+										<li> When the parser encounters a <span class="varname">xs:choice</span>, its default strategy is to parse the data by trying the first branch of the choice. If that fails, the parser backtracks and tries the second branch. And so on, until a branch parses successfully. In our example, the parser tries ItemGrocery first, and if that fails it backtracks and tries ItemNonGrocery.
+										
+										</li>
+									
+										<li> Open the <span class="uicontrol">DFDL Test - Trace</span> view and scroll back through the trace entries. You will see an error message CTDP3053E saying that a zoned number conversion error occurred. At this point the parser was attempting to parse the choice by trying ItemGrocery, but the error occurred. The trace entries after that show the parser backtracking and attempting to parse the choice by trying ItemNonGrocery, which succeeded.
+										
+										</li>
+									
+										<li> Sometimes the default strategy of the parser is not sufficient to resolve a <span class="varname">xs:choice</span> resulting from a COBOL REDEFINES. If that is the case, DFDL provides two other features to help you - discriminators and direct dispatch. These DFDL features are covered in detail by other IBM Integration Bus tutorials.
 										
 										</li>
 									
@@ -286,10 +360,6 @@
 										
 										</li>
 									
-										<li> Repeat steps 1 through 6 for the <span class="filepath">INVOIC_D.03B_Interchange_with_UNA.txt</span> example data file.
-										
-										</li>
-									
 										<li> As an alternative to the toolbar buttons, you can also test from the <span class="uicontrol">DFDL Test - Parse</span> and <span class="uicontrol">DFDL Test - Serialize</span> views, using the <span class="uicontrol">Browse</span> button to select a data source and the green play icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png" alt> to run the DFDL parser or serializer.
 										
 										</li>
@@ -299,16 +369,7 @@
 									
 								
 							
-								<p> The supplied DFDL schemas parse UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit the <span class="filepath">EDIFACT-Service-Segments-4.1.xsd</span> file in the <span class="library">EDIFACT-Common</span> library and change the DFDL expression used by setting the <span class="varname">SegmentTerm</span> DFDL variable to the commented-out value. </p>
-								
-							
-								<p> If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit the <span class="filepath">IBM_EDI_Format.xsd</span> file in the <span class="library">EDIFACT-Common</span> library. In this file, set the <span class="varname">RepeatSep</span> DFDL variable to take the default value '+' (plus) instead of '*' (asterisk). </p>
-								
-							
-								<p> If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit the <span class="filepath">IBM_EDI_Format.xsd</span> file in the <span class="library">EDIFACT-Common</span> library. In this file, change the <span class="varname">DecimalSep</span> DFDL variable to take the default value ',' (comma) instead of '.' (period). </p>
-								
-							
-								<p> The two shared libraries can be deployed to an integration node for use by message flows. </p>
+								<p> The shared library can be deployed to an integration node for use by message flows. </p>
 								
 							
 						</div>
@@ -321,16 +382,6 @@
 																
 								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20065_.htm')" title="Knowledge Center link to Testing a DFDL schema file">Testing a DFDL schema file</a> </li>
 							   	
-							
-								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
-							   	
-							
-								
-								
-								<li> <a href="http://dfdlschemas.github.io/EDIFACT/" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
-									
 							
 							</ul>
 						</div>
