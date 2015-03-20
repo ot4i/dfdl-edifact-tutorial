@@ -5,4 +5,4 @@ The src folder contains the IIB eclipse projects that comprise this tutorial. Th
 
 The doc folder contains the json file from which the tutorial html pages are generated.
 
-The gh_pages contain the generated 'steps' and 'details' html pages, plus a copy of repo_metadata.json modified to include an entry for this tutorial (for testing purposes), plus other javasscript etc files needed for the html pages. 
+The gh_pages contain the generated 'steps' and 'details' html pages, plus a copy of repo_metadata.json modified to include an entry for this tutorial and a copy of TutorialManager.html (for testing purposes). 
