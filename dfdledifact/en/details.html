@@ -46,7 +46,7 @@
       <h4>Modeling EDIFACT data by using DFDL</h4>
     </div>
     <div class="small-3 medium-3 large-3 columns"> 
-      <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a>
+      <!--a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm');" class="small right helplink">IBM Knowledge Center</a-->
     </div>
   </div> 
   <hr>
@@ -64,6 +64,14 @@
       
         
         <p> This tutorial demonstrates how to model UN/EDIFACT data by using DFDL schema. </p>
+      
+        <p> UN/EDIFACT is an international standard for EDI trading in commercial and non-commercial sectors. UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages, which consist of segments, which in turn consist of composites. Composites in turn consist of elements. Segments, composites, and elements are delimited by separators. Only segments have initiators. </p>
+      
+        <p> An interchange starts with a UNB segment and ends with a UNZ segment. A message starts with a UNH segment and ends with a UNT segment. An element in the UNH segment identifies the message type. Messages may be grouped into functional groups, which start with a UNG segment and end with a UNE segment. Optionally, the interchange can start with a UNA segment that defines the delimiters used by the interchange; defaults are used if there is no UNA. </p>
+      
+        <p> UN/EDIFACT data streams adopt one of several syntax levels, the most common versions being version 3 or version 4. </p>
+      
+        <p> The DFDL schema editor is used to view the model and parse example EDIFACT data files. </p>
       
       </div>
     </div><!-- End Columns -->

@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4>Modeling EDIFACT data by using DFDL</h4>
+	    <h4 class="title">Modeling EDIFACT data by using DFDL <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> View Details</div> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -62,10 +62,7 @@
 	<div class="row">          
 		  <div class="small-12 medium-12 large-12 columns">
 			<ul class="tabs vertical"> 
-				<li class="tab-title tab-title-small active"> 
-				  <a href="javascript:;" onclick="show('panel11')">Overview</a>
-				</li>
-				<li class="tab-title tab-title-small">
+				<li class="tab-title tab-title-small active">
 				  <a href="javascript:;" onclick="show('panel21')">Create</a> 
 				</li>
 				<li class="tab-title tab-title-small">
@@ -77,52 +74,7 @@
 			</ul>
 			<!-- editing -->
 			<div class="tabs-content panel-thin-blue vertical"> 
-			    <div class="content active" id="panel11">
-			    	<div class="small-12 medium-12 large-12 columns">
-				    	<div class="row content-details">
-					      	<h4>Overview</h4>
-					        
-						    
-								<p> This tutorial demonstrates the modeling of UN/EDIFACT data using DFDL schema. The DFDL schema editor is used to view the model and parse example EDIFACT data files. </p>
-							
-								<p> UN/EDIFACT is an international standard for EDI trading in commercial and non-commercial sectors. UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages, which consist of segments, which in turn consist of composites. Composites in turn consist of elements. Segments, composites, and elements are delimited by separators. Only segments have initiators. </p>
-							
-								<p> An interchange starts with a UNB segment and ends with a UNZ segment. A message starts with a UNH segment and ends with a UNT segment. An element in the UNH segment identifies the message type. Messages may be grouped into functional groups, which start with a UNG segment and end with a UNE segment. Optionally, the interchange can start with a UNA segment that defines the delimiters used by the interchange; defaults are used if there is no UNA. </p>
-							
-								<p> UN/EDIFACT data streams adopt one of several syntax levels, the most common versions being version 3 or version 4. </p>
-							
-						</div>
-							
-						<div class="row content-details">
-							<h4>Find out more</h4>
-							<ul>
-							
-								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to Message modeling overview">Message modeling overview</a> </li>
-							   	
-							
-								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to How to model data with DFDL">How to model data with DFDL</a> </li>
-							   	
-							
-								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
-							   	
-							
-								
-								
-								<li> <a href="http://dfdlschemas.github.io/EDIFACT/" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
-									
-							
-							</ul>
-						</div>	
-							
-					</div>
-				</div>
-		    	<div class="content" id="panel21">
+		    	<div class="content active" id="panel21">
 		    		
 		    		<div class="small-10 medium-10 large-10 columns divider">
 					
@@ -147,8 +99,23 @@
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to Working with DFDL schema files">Working with DFDL schema files</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to Message modeling overview">Message modeling overview</a> </li>
 							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to How to model data with DFDL">How to model data with DFDL</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+							   	
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('http://dfdlschemas.github.io/EDIFACT/')" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
+									
 							
 							</ul>
 						</div>
@@ -329,7 +296,7 @@
 							
 								
 								
-								<li> <a href="http://dfdlschemas.github.io/EDIFACT/" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
+								<li> <a href="javascript:;" onclick="openExternalBrowser('http://dfdlschemas.github.io/EDIFACT/')" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
 									
 							
 							</ul>
