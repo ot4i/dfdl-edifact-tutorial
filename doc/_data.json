@@ -2,7 +2,7 @@
   "version":"0.6",
     "pageContent": 
 	{
-        "_comments": "JSON object that contains data for page labels, buttons, etc.",
+        "_comments": "JSON objects that contains data for page labels, buttons, etc.",
         "navItems": 
 		{
             "_common": 
