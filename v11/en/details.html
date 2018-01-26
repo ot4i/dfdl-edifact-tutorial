@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ 
+	
+<!-- header::Start -->
+	<head>
+		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+		<!-- Next 2 http=equiv headers required to disable caching the Eclipse Browser Widget -->
+		<meta http-equiv="Pragma" content="no-cache">
+  		<meta http-equiv="Expires" content="-1">
+
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
+		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="author" content="IBM">
+		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="keywords" content="keywords" > 
+		<meta name="robots" content="index,follow">
+		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		
+		<title>IBM Integration Bus V10 Tutorial</title>
+
+    	<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/main.css" />
+		<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/app.css" />
+    	
+		<script src="http://ot4i.github.io/iib-tutorials/js/json2.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
+	</head>
+<!-- header::End -->
+<!-- body::Start -->
+		<body>
+    <!-- body content here -->
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <p> </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-9 medium-9 large-9 columns">
+      <h4>Modeling EDIFACT data by using DFDL</h4>
+    </div>
+    <div class="small-3 medium-3 large-3 columns"> 
+      <!--a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm');" class="small right helplink">IBM Knowledge Center</a-->
+    </div>
+  </div> 
+  <hr>
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <h5> Learn how to model EDIFACT data by using Data Format Description Language (DFDL). </h5>
+    </div>
+  </div>
+  <div class="row content-details">
+    <div class="small-6 medium-6 large-6 columns">
+      <div class="row">
+        <h5> OVERVIEW </h5>
+      </div>
+      <div class="row">
+      
+        
+        <p> This tutorial demonstrates how to model UN/EDIFACT data by using DFDL schema. </p>
+      
+        <p> UN/EDIFACT is an international standard for EDI trading in commercial and non-commercial sectors. UN/EDIFACT data streams have a hierarchical structure where the top level is referred to as an interchange, and lower levels contain multiple messages, which consist of segments, which in turn consist of composites. Composites in turn consist of elements. Segments, composites, and elements are delimited by separators. Only segments have initiators. </p>
+      
+        <p> An interchange starts with a UNB segment and ends with a UNZ segment. A message starts with a UNH segment and ends with a UNT segment. An element in the UNH segment identifies the message type. Messages may be grouped into functional groups, which start with a UNG segment and end with a UNE segment. Optionally, the interchange can start with a UNA segment that defines the delimiters used by the interchange; defaults are used if there is no UNA. </p>
+      
+        <p> UN/EDIFACT data streams adopt one of several syntax levels, the most common versions being version 3 or version 4. </p>
+      
+        <p> The DFDL schema editor is used to view the model and parse example EDIFACT data files. </p>
+      
+      </div>	  
+		<!-- help links do not work in details page for GA 
+        
+		<div class="row content-details">
+			<h4>Find out more</h4>
+			<ul>
+			
+				
+												
+				<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd40430_.htm');" title="Knowledge Center link to Message modeling overview">Message modeling overview</a> </li>
+			   	
+			
+				
+												
+				<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20125_.htm');" title="Knowledge Center link to How to model data with DFDL">How to model data with DFDL</a> </li>
+			   	
+			
+				
+												
+				<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm');" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+			   	
+			
+				
+				
+				<li> <a href="javascript:;" onclick="openExternalBrowser('http://dfdlschemas.github.io/EDIFACT/')" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
+					
+			
+			</ul>
+		</div>
+				  
+        -->
+        
+    </div><!-- End Columns -->
+    <div class="small-offset-1 small-5 medium-offset-1 medium-5 large-offset-1 large-5 columns">
+      <div class="row">
+        <div class="panel radius" style="margin:0px; margin-bottom:10px; padding:5px">
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <img class="icon-image" src="http://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/clock-time_128.png">
+            </div>
+            <div class="small-10 large-10 columns">
+              This tutorial takes approximately <b>5 minutes</b>.
+            </div>
+          </div>
+          <div class="row" style="margin-left: 1rem; text-align: center">
+            <action>
+              <div class="small radius button" id="startTutorial" onclick="startTutorialFromDetailsScreen()"> Start Tutorial
+            </div>
+            </action>
+            <div class="small radius button" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</div>
+          </div>
+        </div>
+      </div>
+      <div class="row content-details">
+        <div class="small-6 medium-6 large-6 columns">
+          <h5> Tutorial Topics </h5>
+          <ul>
+            
+            
+              <li>Modeling EDIFACT messages</li>
+            
+              <li>Editing DFDL schema</li>
+            
+              <li>Testing DFDL schema</li>
+            
+          </ul>
+        </div>
+        <div class="small-6 medium-6 large-6 columns">
+          <h5>Learning outcomes </h5>
+          <ul>
+          
+          
+            <li>An understanding of how the DFDL editor can be used to model and parse EDIFACT data.</li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div></body>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/main.js"></script>
+	</body>
+<!-- body::End -->
+
+</html>
