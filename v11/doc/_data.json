@@ -202,7 +202,7 @@
               "section":"You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class='uicontrol'>DFDL Test</span> perspective by clicking <span class='uicontrol'>Window &gt; Open Perspective</span> and then clicking <span class='uicontrol'>DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src='http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png' alt='' />)." 
             },
             {
-              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class='uicontrol'>Window &gt; Show View</span> menu option to add it back."
+              "section":"<b>Tip:</b> If this <span class='uicontrol'>Tutorial Steps View</span> tab disappears when you switch perspectives, to add it back, use the <span class='uicontrol'>Window &gt; Show View &gt; Other</span> menu option. In the resulting <span class='uicontrol'>Show View</span> dialog, open the Sample Category folder, choose Tutorial Steps View and click OK."
             }
           ]  
         },
