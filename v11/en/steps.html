@@ -15,14 +15,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="copyright" content="Copyright IBM Corporation 2014" />
-		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="author" content="IBM">
-		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="keywords" content="keywords" > 
 		<meta name="robots" content="index,follow">
-		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
 		
-		<title>IBM Integration Bus V10 Tutorial</title>
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
 
     	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
 		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
@@ -43,10 +43,10 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Modeling EDIFACT data by using DFDL <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> View Details</div> </action></h4>
+	    <h4 class="title">Modeling EDIFACT data by using DFDL <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
-		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.ace.home.doc/help_home.htm')" class="small right helplink">IBM Knowledge Center</a> 
+		<a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm')" class="small right helplink">IBM Knowledge Center</a> 
 	  </div>
 	</div> 
 	<hr>
@@ -55,8 +55,8 @@
 		<h5> Learn how to model EDIFACT data by using Data Format Description Language (DFDL). </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
-			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
-			</div>
+			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</button>
 		</div>
 	</div>
 	<div class="row">          
@@ -98,19 +98,19 @@
 							<ul>
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to Message modeling overview">Message modeling overview</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to  Message modeling overview">Message modeling overview</a> </li>
+									
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to How to model data with DFDL">How to model data with DFDL</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to  How to model data with DFDL">How to model data with DFDL</a> </li>
+									
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to  EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+									
 							
 								
 								
@@ -118,9 +118,9 @@
 									
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to Working with DFDL schema files">Working with DFDL schema files</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to  Working with DFDL schema files">Working with DFDL schema files</a> </li>
+									
 							
 							</ul>
 						</div>
@@ -152,16 +152,16 @@
 								<p> The Interchange message is highlighted and it models a whole EDIFACT interchange. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Interchange message structure by expanding the elements. </p>
 								
 							
-								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from schema <span class="filepath">IBM_EDI_Format.xsd</span> in the <span class="library">EDIFACT-Common</span> library. </p>
+								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from schema <span class="filepath">IBM_EDI_Format.xsd</span> in the <span class="library">EDIFACT-Common</span> library. </p>
 								
 							
 								<p> Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL properties <span class="varname">Terminator</span>, <span class="varname">Separator</span>, <span class="varname">Escape Character</span> and <span class="varname">Decimal Separator</span> are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the <span class="uicontrol">Variables</span> tab next to <span class="uicontrol">Representation Properties</span>. </p>
 								
 							
-								<p> You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class="uicontrol">DFDL Test</span> perspective by clicking <span class="uicontrol">Window &gt; Open Perspective</span> and then clicking <span class="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src="https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
+								<p> You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class="uicontrol">DFDL Test</span> perspective by clicking <span class="uicontrol">Window &gt; Open Perspective</span> and then clicking <span class="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
 								
 							
-								<p> <b>Tip:</b> If this <span class="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, use the <span class="uicontrol">Window &gt; Show View</span> menu option to add it back. </p>
+								<p> <b>Tip:</b> If this <span class="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, to add it back, use the <span class="uicontrol">Window &gt; Show View &gt; Other</span> menu option. In the resulting <span class="uicontrol">Show View</span> dialog, open the Sample Category folder, choose Tutorial Steps View and click OK. </p>
 								
 							
 						</div>
@@ -171,9 +171,9 @@
 							<ul>
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to Working with DFDL schema files">Working with DFDL schema files</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to  Working with DFDL schema files">Working with DFDL schema files</a> </li>
+									
 							
 							</ul>
 						</div>
@@ -262,7 +262,7 @@
 										
 										</li>
 									
-										<li> As an alternative to the toolbar buttons, you can also test from the <span class="uicontrol">DFDL Test - Parse</span> and <span class="uicontrol">DFDL Test - Serialize</span> views, using the <span class="uicontrol">Browse</span> button to select a data source and the green play icon <img src="https://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png" alt> to run the DFDL parser or serializer.
+										<li> As an alternative to the toolbar buttons, you can also test from the <span class="uicontrol">DFDL Test - Parse</span> and <span class="uicontrol">DFDL Test - Serialize</span> views, using the <span class="uicontrol">Browse</span> button to select a data source and the green play icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png" alt> to run the DFDL parser or serializer.
 										
 										</li>
 									
@@ -290,14 +290,14 @@
 							<ul>
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/df20065_.htm')" title="Knowledge Center link to Testing a DFDL schema file">Testing a DFDL schema file</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20065_.htm')" title="Knowledge Center link to  Testing a DFDL schema file">Testing a DFDL schema file</a> </li>
+									
 							
 								
-																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
-							   	
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to  EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+									
 							
 								
 								
