@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ 
+	
+<!-- header::Start -->
+	<head>
+		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+		<!-- Next 2 http=equiv headers required to disable caching the Eclipse Browser Widget -->
+		<meta http-equiv="Pragma" content="no-cache">
+  		<meta http-equiv="Expires" content="-1">
+
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
+		<meta name="author" content="IBM">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
+		<meta name="keywords" content="keywords" > 
+		<meta name="robots" content="index,follow">
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
+		
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
+
+    	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
+		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
+    	
+		<script src="https://ot4i.github.io/iib-tutorials/js/json2.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
+	</head>
+<!-- header::End -->
+<!-- body::Start -->
+		<body>
+  	<!-- body content here -->
+	<div class="row">
+	  <div class="small-12 medium-12 large-12 columns">
+	    <p> </p>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="small-9 medium-9 large-9 columns">
+	    <h4 class="title">Modeling EDIFACT data by using DFDL <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
+	  </div>
+	  <div class="small-3 medium-3 large-3 columns">
+		<a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm')" class="small right helplink">IBM Knowledge Center</a> 
+	  </div>
+	</div> 
+	<hr>
+	<div class="row">
+		<div class="small-10 medium-10 large-10 columns">
+		<h5> Learn how to model EDIFACT data by using Data Format Description Language (DFDL). </h5>
+		</div>
+		<div class="small-2 medium-2 large-2 columns">
+			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</button>
+		</div>
+	</div>
+	<div class="row">          
+		  <div class="small-12 medium-12 large-12 columns">
+			<ul class="tabs vertical"> 
+				<li class="tab-title tab-title-small active">
+				  <a href="javascript:;" onclick="show('panel21')">Create</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel31')">Prepare</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel41')">Run</a> 
+				</li>
+			</ul>
+			<!-- editing -->
+			<div class="tabs-content panel-thin-blue vertical"> 
+		    	<div class="content active" id="panel21">
+		    		
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+				      	<div class="row content-details">
+					      	<h4>Import projects</h4>
+					        
+						    
+								<p> Click <span class="uicontrol">Import</span> and two shared libraries are imported into your workspace. </p>
+								
+							
+								<p> Library <span class="library">EDIFACT-D03B</span> contains a pair of DFDL schemas that model a UN/EDIFACT Supply Chain interchange for release D.03B. Definitions for message types INVOIC and ORDERS are provided. Test data files are included in the library. </p>
+								
+							
+								<p> Library <span class="library">EDIFACT-Common</span> contains a DFDL schema to define default values for DFDL properties, and a DFDL schema to model the Uxx service segments and service messages for syntax version 4. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to  Message modeling overview">Message modeling overview</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm')" title="Knowledge Center link to  How to model data with DFDL">How to model data with DFDL</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to  EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('http://dfdlschemas.github.io/EDIFACT/')" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to  Working with DFDL schema files">Working with DFDL schema files</a> </li>
+									
+							
+							</ul>
+						</div>
+						
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainSchema')"> Import <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+										
+				    </div>
+					
+		    	</div>
+		    	<div class="content" id="panel31">
+					
+					<div class="small-12 medium-12 large-12 columns">
+					
+						<div class="row content-details">
+						  	<h4>Exploring the schemas</h4>
+						    
+						    
+								<p> The <span class="library">EDIFACT-D03B</span> and <span class="library">EDIFACT-Common</span> libraries are shown in the <span class="uicontrol">Application Development</span> view of your workspace. </p>
+								
+							
+								<p> The <span class="filepath">EDIFACT-SupplyChain-Messages-D.03B.xsd</span> DFDL schema in the <span class="library">EDIFACT-D03B</span> library opens in the DFDL editor. If it does not open, double-click the DFDL schema to open it in the editor. </p>
+								
+							
+								<p> The Interchange message is highlighted and it models a whole EDIFACT interchange. The main editor view shows the logical components of the message, such as elements and sequences. You can explore the Interchange message structure by expanding the elements. </p>
+								
+							
+								<p> The physical rendering of each logical component is described by the DFDL properties in the <span class="uicontrol">Representation Properties</span> tab. DFDL properties can be specified locally on the component, or can be inherited from pre-defined sets of DFDL properties. Inherited properties have an icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlInheritedProperty.png" alt> shown next to them, and hovering over the icon reveals where the property is defined. In this schema, inherited properties are obtained from schema <span class="filepath">IBM_EDI_Format.xsd</span> in the <span class="library">EDIFACT-Common</span> library. </p>
+								
+							
+								<p> Because the settings of delimiters in an EDIFACT interchange can vary, the DFDL properties <span class="varname">Terminator</span>, <span class="varname">Separator</span>, <span class="varname">Escape Character</span> and <span class="varname">Decimal Separator</span> are set dynamically using DFDL expressions that refer to DFDL variables. The variables have default values and are overridden by the settings in a UNA segment if present. You can see this if you expand the UNA element in Interchange, select any of the child elements, and click on the <span class="uicontrol">Variables</span> tab next to <span class="uicontrol">Representation Properties</span>. </p>
+								
+							
+								<p> You will be test parsing example EDIFACT data by using the Interchange message. The test parsing takes place entirely within the DFDL editor, so there is no message flow in this tutorial and no Deploy step. Before test parsing, switch to the <span class="uicontrol">DFDL Test</span> perspective by clicking <span class="uicontrol">Window &gt; Open Perspective</span> and then clicking <span class="uicontrol">DFDL Test</span>. (Alternatively, you can use the toolbar icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/changePerspective.png" alt>). </p>
+								
+							
+								<p> <b>Tip:</b> If this <span class="uicontrol">Tutorial Steps View</span> tab disappears when you switch perspectives, to add it back, use the <span class="uicontrol">Window &gt; Show View &gt; Other</span> menu option. In the resulting <span class="uicontrol">Show View</span> dialog, open the Sample Category folder, choose Tutorial Steps View and click OK. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm')" title="Knowledge Center link to  Working with DFDL schema files">Working with DFDL schema files</a> </li>
+									
+							
+							</ul>
+						</div>
+							
+					</div>
+					
+		    	</div>
+		    	<div class="content" id="panel41">
+		    		
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+				    	<div class="row content-details">
+					      	<h4>Follow these steps to complete the tutorial</h4>
+					        
+						    
+								<p> The <span class="filepath">EDIFACT-SupplyChain-Messages-D.03B.xsd</span> DFDL schema is open in the DFDL editor. The Interchange message should be highlighted in green. </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> Test parse an example data file:
+										
+										
+											
+											<ol>
+											
+												
+													<li> Click the <span class="uicontrol">Test Parse Model</span> button in the DFDL editor toolbar. The <span class="wintitle">Test Parse Model</span> window opens.</li>
+												
+													<li> In the Message section, select <span class="uicontrol">Interchange</span>.</li>
+												
+													<li> In the Parser Input section, select <span class="uicontrol">Content from a data file</span> then click <span class="uicontrol">Browse</span>.</li>
+												
+													<li> Select the <span class="filepath">ORDERS_D.03B_Interchange.txt</span> file from <span class="library">EDIFACT-D03B</span> then click <span class="uicontrol">OK</span>.</li>
+												
+													<li> Set the Encoding to <span class="uicontrol">ASCII</span>.</li>
+												
+													<li> Click <span class="uicontrol">OK</span>. If asked to confirm switching to the <span class="uicontrol">DFDL Test</span> perspective, click <span class="uicontrol">Yes</span>.</li>
+												
+											
+											</ol>
+											
+										
+										</li>
+									
+										<li> The results of the test parse are displayed. You should see the message <span class="systemoutput">Parsing completed successfully</span>. You can dismiss this message.
+										
+										</li>
+									
+										<li> You can view the parsed data file in the <span class="uicontrol">DFDL Test - Parse</span> view. The results of the parse can be viewed in the <span class="uicontrol">DFDL Test - Logical Instance</span> view, as a tree or as XML. You can view a log of the parser actions in the <span class="uicontrol">DFDL Test - Trace</span> view.
+										
+										</li>
+									
+										<li> Test serialize the logical instance that resulted from the parse:
+										
+										
+											
+											<ol>
+											
+												
+													<li> Click the <span class="uicontrol">Test Serialize Model</span> button in the DFDL editor toolbar. The <span class="wintitle">Test Serialize Model</span> window opens.</li>
+												
+													<li> In the Serializer Input section, select <span class="uicontrol">Content from a DFDL Test - Logical Instance</span>.</li>
+												
+													<li> Set the Encoding to <span class="uicontrol">ASCII</span>.</li>
+												
+													<li> Click <span class="uicontrol">OK</span>.</li>
+												
+											
+											</ol>
+											
+										
+										</li>
+									
+										<li> The results of the test serialize are displayed. You should see the message <span class="systemoutput">Serialization completed successfully</span>. You can dismiss this message.
+										
+										</li>
+									
+										<li> You can view the serialized data file in the <span class="uicontrol">DFDL Test - Serialize</span> view. You can view a log of the serializer actions in the <span class="uicontrol">DFDL Test - Trace</span> view.
+										
+										</li>
+									
+										<li> Repeat steps 1 through 6 for the <span class="filepath">INVOIC_D.03B_Interchange_with_UNA.txt</span> example data file.
+										
+										</li>
+									
+										<li> As an alternative to the toolbar buttons, you can also test from the <span class="uicontrol">DFDL Test - Parse</span> and <span class="uicontrol">DFDL Test - Serialize</span> views, using the <span class="uicontrol">Browse</span> button to select a data source and the green play icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/dfdlTestPlay.png" alt> to run the DFDL parser or serializer.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+								<p> The supplied DFDL schemas parse UN/EDIFACT interchanges with or without new lines at the end of each segment, but will serialize interchanges without new lines. If you need to serialize with new lines, you can edit the <span class="filepath">EDIFACT-Service-Segments-4.1.xsd</span> file in the <span class="library">EDIFACT-Common</span> library and change the DFDL expression used by setting the <span class="varname">SegmentTerm</span> DFDL variable to the commented-out value. </p>
+								
+							
+								<p> If you need to support UN/EDIFACT syntax version 3 instead of syntax version 4, you can edit the <span class="filepath">IBM_EDI_Format.xsd</span> file in the <span class="library">EDIFACT-Common</span> library. In this file, set the <span class="varname">RepeatSep</span> DFDL variable to take the default value '+' (plus) instead of '*' (asterisk). </p>
+								
+							
+								<p> If you need to support ',' (comma) as the default decimal separator instead of '.' (period), you can edit the <span class="filepath">IBM_EDI_Format.xsd</span> file in the <span class="library">EDIFACT-Common</span> library. In this file, change the <span class="varname">DecimalSep</span> DFDL variable to take the default value ',' (comma) instead of '.' (period). </p>
+								
+							
+								<p> The two shared libraries can be deployed to an integration node for use by message flows. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details"> 	
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20065_.htm')" title="Knowledge Center link to  Testing a DFDL schema file">Testing a DFDL schema file</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09560_.htm')" title="Knowledge Center link to  EDIFACT messaging standard">EDIFACT messaging standard</a> </li>
+									
+							
+								
+								
+								<li> <a href="javascript:;" onclick="openExternalBrowser('http://dfdlschemas.github.io/EDIFACT/')" title="GitHub link to  DFDLSchemas EDIFACT repository">DFDLSchemas EDIFACT repository</a> </li>
+									
+							
+							</ul>
+						</div>
+							
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="cleanUp()" title="Clean up and remove any changes in your workspace made by the tutorial."> Clean Up <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/close-cancel-error_128-red.png"></a></h4>
+				    
+					
+				    </div>
+					
+				</div>	
+			</div> <!-- tab-content -->
+		</div> <!-- columns -->
+	  </div> <!-- row --></body>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/main.js"></script>
+	</body>
+<!-- body::End -->
+
+</html>
