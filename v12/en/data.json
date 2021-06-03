@@ -38,8 +38,8 @@
       "resourceToOpen":"MainSchema",
       "helpLink": 
 	{
-           "text": "IBM Knowledge Center",
-           "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+                "text": "IBM Documentation",
+           		"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/acesw_home.html"
         }
     },
     "pageDetails":{
@@ -88,21 +88,21 @@
           "title":"Find out more",
           "details":[
             {
-              "title":"Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
               "description":"Message modeling overview",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bd40430_.htm",
 			  "type":"web"
             },
             {
-              "title":"Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
               "description":"How to model data with DFDL",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/df20125_.htm",
 			  "type":"web"				
             },
             {
-              "title":"Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
               "description":"EDIFACT messaging standard",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09560_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ad09560_.htm",
 			  "type":"web"
             },
             {
@@ -136,21 +136,21 @@
           "title":"Find out more",
           "details":[
             {
-              "title":"Knowledge Center link to ",
+			"title": "IBM Documentation link to ",
               "description":"Message modeling overview",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bd40430_.htm",
+			"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bd40430_.htm",
 			  "type":"web"
             },
             {
-              "title":"Knowledge Center link to ",
+			"title": "IBM Documentation link to ",
               "description":"How to model data with DFDL",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20125_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/df20125_.htm",
 			  "type":"web"
             },
             {
-              "title":"Knowledge Center link to ",
+				"title": "IBM Documentation link to ",
               "description":"EDIFACT messaging standard",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09560_.htm",
+				"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ad09560_.htm",
 			  "type":"web"
             },
             {
@@ -160,10 +160,10 @@
               "type":"web"
             },
             {
-              "title":"Knowledge Center link to ",
-              "description":"Working with DFDL schema files",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
-			  "type":"web"
+			"title": "IBM Documentation link to ",
+            "description":"Working with DFDL schema files",
+			"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/df20061_.htm",
+			"type":"web"
             }
           ]
         },
@@ -210,9 +210,9 @@
           "title":"Find out more",
           "details":[
             {
-              "title":"Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
               "description":"Working with DFDL schema files",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20061_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/df20061_.htm",
 			  "type":"web"
             }
           ]
@@ -314,15 +314,15 @@
           "title":"Find out more",
           "details":[
             {
-              "title":"Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
               "description":"Testing a DFDL schema file",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/df20065_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/df20065_.htm",
 			  "type":"web"
             },
             {
-              "title":"Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
               "description":"EDIFACT messaging standard",
-              "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ad09560_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ad09560_.htm",
 			  "type":"web"
             },
             {
